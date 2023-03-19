@@ -62,8 +62,8 @@ func newDeckFromFile(filename string) deck {
 
 // This function will shuffle the deck
 func (d deck) shuffle() {
-	source := rand.NewSource(time.Now().UnixNano()) // Genrate seed using unix time for random new function 
-	r := rand.New(source)							// Genrate new random number using above seed
+	source := rand.NewSource(time.Now().UnixNano()) // Genrate seed using unix time for random new function
+	r := rand.New(source)                           // Genrate new random number using above seed
 
 	for i := range d {
 		newPosition := r.Intn(len(d) - 1)
